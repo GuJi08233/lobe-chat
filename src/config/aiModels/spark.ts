@@ -3,6 +3,23 @@ import { AIChatModelCard } from '@/types/aiModel';
 const sparkChatModels: AIChatModelCard[] = [
   {
     abilities: {
+      functionCall: true,
+      search: true,
+    },
+    contextWindowTokens: 128_000,
+    description:
+      'Spark X1 是讯飞星火认知大模型X系列模型，具备强大的文本理解、分析和生成能力，拥有更优的中文理解能力和更完善的多轮对话能力。作为推理模型，支持128K tokens的上下文窗口，适用于知识问答、文本创作、数据分析等多种场景，提供高质量、精准的AI服务。',
+    displayName: 'Spark X1',
+    enabled: true,
+    id: 'x1',
+    maxOutput: 32_000,
+    settings: {
+      searchImpl: 'internal',
+    },
+    type: 'chat',
+  },
+  {
+    abilities: {
       search: true,
     },
     contextWindowTokens: 8192,
