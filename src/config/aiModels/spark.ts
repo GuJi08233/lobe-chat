@@ -3,25 +3,21 @@ import { AIChatModelCard } from '@/types/aiModel';
 const sparkChatModels: AIChatModelCard[] = [
   {
     abilities: {
-      functionCall: true,
+      reasoning: true,
       search: true,
     },
-    contextWindowTokens: 128_000,
+    contextWindowTokens: 32_768,
     description:
-      'Spark X1 是讯飞星火认知大模型X系列模型，具备强大的文本理解、分析和生成能力，拥有更优的中文理解能力和更完善的多轮对话能力。作为推理模型，支持128K tokens的上下文窗口，适用于知识问答、文本创作、数据分析等多种场景，提供高质量、精准的AI服务。',
+      'Spark X1 模型将进一步升级，在原来数学任务国内领先基础上，推理、文本生成、语言理解等通用任务实现效果对标 OpenAI o1 和 DeepSeek R1。',
     displayName: 'Spark X1',
-    enabled: true,
     id: 'x1',
-    maxOutput: 32_000,
+    maxOutput: 32_768,
     settings: {
-      searchImpl: 'internal',
+      searchImpl: 'params',
     },
     type: 'chat',
   },
   {
-    abilities: {
-      search: true,
-    },
     contextWindowTokens: 8192,
     description:
       'Spark Lite 是一款轻量级大语言模型，具备极低的延迟与高效的处理能力，完全免费开放，支持实时在线搜索功能。其快速响应的特性使其在低算力设备上的推理应用和模型微调中表现出色，为用户带来出色的成本效益和智能体验，尤其在知识问答、内容生成及搜索场景下表现不俗。',
@@ -29,9 +25,6 @@ const sparkChatModels: AIChatModelCard[] = [
     enabled: true,
     id: 'lite',
     maxOutput: 4096,
-    settings: {
-      searchImpl: 'internal',
-    },
     type: 'chat',
   },
   {
@@ -46,24 +39,17 @@ const sparkChatModels: AIChatModelCard[] = [
     id: 'generalv3',
     maxOutput: 8192,
     settings: {
-      searchImpl: 'internal',
+      searchImpl: 'params',
     },
     type: 'chat',
   },
   {
-    abilities: {
-      search: true,
-    },
     contextWindowTokens: 131_072,
     description:
       'Spark Pro 128K 配置了特大上下文处理能力，能够处理多达128K的上下文信息，特别适合需通篇分析和长期逻辑关联处理的长文内容，可在复杂文本沟通中提供流畅一致的逻辑与多样的引用支持。',
     displayName: 'Spark Pro 128K',
-    enabled: true,
     id: 'pro-128k',
     maxOutput: 4096,
-    settings: {
-      searchImpl: 'internal',
-    },
     type: 'chat',
   },
   {
@@ -79,7 +65,7 @@ const sparkChatModels: AIChatModelCard[] = [
     id: 'generalv3.5',
     maxOutput: 8192,
     settings: {
-      searchImpl: 'internal',
+      searchImpl: 'params',
     },
     type: 'chat',
   },
@@ -92,7 +78,6 @@ const sparkChatModels: AIChatModelCard[] = [
     description:
       'Spark Max 32K 配置了大上下文处理能力，更强的上下文理解和逻辑推理能力，支持32K tokens的文本输入，适用于长文档阅读、私有知识问答等场景',
     displayName: 'Spark Max 32K',
-    enabled: true,
     id: 'max-32k',
     maxOutput: 8192,
     settings: {
@@ -113,7 +98,7 @@ const sparkChatModels: AIChatModelCard[] = [
     id: '4.0Ultra',
     maxOutput: 8192,
     settings: {
-      searchImpl: 'internal',
+      searchImpl: 'params',
     },
     type: 'chat',
   },
